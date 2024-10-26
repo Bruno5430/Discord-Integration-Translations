@@ -1,3 +1,17 @@
+# [Discord messages]
+#
+# This message will edited in / sent when the server finished starting
+serverStarted = "Server Started!"
+# Message to show while the server is starting
+# This will be edited to SERVER_STARTED_MSG when webhook is false
+serverStarting = "Server Starting..."
+# This message will be sent when the server was stopped
+serverStopped = "Server Stopped!"
+# The message to print to discord when it was possible to detect a server crash
+serverCrash = "Server Crash Detected :thinking:"
+
+# [Discord to Minecraft messages]
+#
 # This is what will be displayed ingame when someone types into the bot's channel
 # PLACEHOLDERS:
 # %user% - The username
@@ -17,53 +31,8 @@ ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r in reply 
 # %user% - The users display name (Someone123)
 # %user#tag% - The users username (@username) or user tag (User#0001)
 # %id% - The user ID
-# 
 # NOTE: using an @ here can cause ping sounds ingame
 discordUserHover = "§3Discord User %user%\n§aClick to mention"
-# This message will edited in / sent when the server finished starting
-serverStarted = "Server Started!"
-# Message to show while the server is starting
-# This will be edited to SERVER_STARTED_MSG when webhook is false
-serverStarting = "Server Starting..."
-# This message will be sent when the server was stopped
-serverStopped = "Server Stopped!"
-# The message to print to discord when it was possible to detect a server crash
-serverCrash = "Server Crash Detected :thinking:"
-# Gets sent when an player joins
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-playerJoin = "%player% joined"
-# Gets sent when an player leaves
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-playerLeave = "%player% left"
-# Gets sent when an player dies
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-# %msg% - The death message
-playerDeath = "%player% %msg%"
-# Message sent instead of playerLeave, when the player times out
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-playerTimeout = "%player% timed out!"
-# Gets sent when an player finishes an advancement
-# Supports MulitLined messages using \n
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-# %advName% - The advancement name
-# %advDesc% - The advancement description
-advancementMessage = "%player% just made the advancement **%advName%**\n_%advDesc%_"
-# The chat message in discord, sent from an player in-game
-# 
-# PLACEHOLDERS:
-# %player% - The player's name
-# %msg% - The chat message
-discordChatMessage = "%player%: %msg%"
 # Sent to a player when someone reacts to his messages
 # PLACEHOLDERS:
 # %name% - (Nick-)Name of the user who reacted (format: 'SomeNickName')
@@ -84,6 +53,38 @@ embedMessage = "Message"
 # Hover message for the bot tag ingame
 bot = "This user is an bot"
 
+# [Minecraft to Discord messages]
+#
+# Gets sent when an player joins
+# PLACEHOLDERS:
+# %player% - The player's name
+playerJoin = "%player% joined"
+# Gets sent when an player leaves
+# PLACEHOLDERS:
+# %player% - The player's name
+playerLeave = "%player% left"
+# Gets sent when an player dies
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The death message
+playerDeath = "%player% %msg%"
+# Message sent instead of playerLeave, when the player times out
+# PLACEHOLDERS:
+# %player% - The player's name
+playerTimeout = "%player% timed out!"
+# Gets sent when an player finishes an advancement
+# Supports MulitLined messages using \n
+# PLACEHOLDERS:
+# %player% - The player's name
+# %advName% - The advancement name
+# %advDesc% - The advancement description
+advancementMessage = "%player% just made the advancement **%advName%**\n_%advDesc%_"
+# The chat message in discord, sent from an player in-game
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The chat message
+discordChatMessage = "%player%: %msg%"
+
 # Strings about the discord commands
 [commands]
   # Shown in console when trying to use a in-game only command
@@ -97,7 +98,6 @@ bot = "This user is an bot"
   # Message sent when user does not have permission to run a command
   noPermission = "You don't have permission to execute this command!"
   # Message sent when an invalid command was typed
-  # 
   # PLACEHOLDERS:
   unknownCommand = "Unknown command, try `/help` for a list of commands"
   # Message if a player provides less arguments than required
@@ -105,7 +105,6 @@ bot = "This user is an bot"
   # Message if a player provides too many arguments
   tooManyArguments = "Too many arguments"
   # Message if a player can not be found
-  # 
   # PLACEHOLDERS:
   # %player% - The player's name
   playerNotFound = "Can not find player \"%player%\""
@@ -124,7 +123,6 @@ bot = "This user is an bot"
   # Message sent when unignoring Discord messages
   commandIgnore_unignore = "You are no longer ignoring Discord messages!"
   # Message sent when using the uptime command
-  # 
   # PLACEHOLDERS:
   # %uptime% - Uptime in uptime format, see uptimeFormat
   cmdUptime_message = "The server is running for %uptime%"
