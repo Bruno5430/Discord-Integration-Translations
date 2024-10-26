@@ -1,161 +1,160 @@
-# [Discord messages]
+# [Mensajes de discord]
 #
-# This message will edited in / sent when the server finished starting
-serverStarted = "Server Started!"
-# Message to show while the server is starting
-# This will be edited to SERVER_STARTED_MSG when webhook is false
-serverStarting = "Server Starting..."
-# This message will be sent when the server was stopped
-serverStopped = "Server Stopped!"
-# The message to print to discord when it was possible to detect a server crash
-serverCrash = "Server Crash Detected :thinking:"
+# Mensaje a enviar / editar cuando se inicie el servidor
+serverStarted = "Servidor iniciado :white_check_mark:"
+# Mensaje a mostrar mientras se inicia el servidor
+# Este mensaje será editado a lo que diga en "serverStarted" cuando no se usen webhooks
+serverStarting = "Iniciando servidor :clock1:"
+# Mensaje a enviar cuando se detenga el servidor
+serverStopped = "Servidor apagado"
+# Mensaje a mostrar cuando el bot haya detectado que el servidor ha crasheado
+serverCrash = "El servidor ha crasheado :warning:"
 
-# [Discord to Minecraft messages]
+# [Mensajes de discord a minecraft]
 #
-# This is what will be displayed ingame when someone types into the bot's channel
+# Así se verán los mensajes del chat de discord dentro del juego
 # PLACEHOLDERS:
-# %user% - The username
-# %id% - The user ID
-# %msg% - The message
+# %user% - Nombre del usuario
+# %id% - ID del usuario
+# %msg% - Mensaje
 ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
-# This is what will be displayed ingame when someone sends an reply into the bot's channel
+# Así se verán los mensajes cuando alguien responda un mensaje del chat de discord dentro del juego
 # PLACEHOLDERS:
-# %user% - The username
-# %id% - The user ID
-# %msg% - The reply message
-# %ruser% - The username of the message that got the reply
-# %rmsg% - The replied message
-ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r in reply to §3%ruser%§r: %msg%"
-# Message shown when hovering over the username of an discord message
+# %user% - Nombre del usuario
+# %id% - ID del usuario
+# %msg% - Mensaje
+# %ruser% - Nombre del usuario al que están respondiendo
+# %rmsg% - El mensaje al que están respondiendo
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r respondió a §3%ruser%§r: %msg%"
+# Lo que se muestra al colocar el mouse sobre el nombre de usuario de un mensaje de discord
 # PLACEHOLDERS:
-# %user% - The users display name (Someone123)
-# %user#tag% - The users username (@username) or user tag (User#0001)
-# %id% - The user ID
-# NOTE: using an @ here can cause ping sounds ingame
-discordUserHover = "§3Discord User %user%\n§aClick to mention"
-# Sent to a player when someone reacts to his messages
+# %user% - Nombre del usuario (Persona123)
+# %user#tag% - Discriminador del usuario (@usuario o Usuario#0001)
+# %id% - ID del usuario
+# NOTE: si usas "@" es probable que suene un ping dentro del juego
+discordUserHover = "§3Usuario en discord: %user%\n§aHaz click aquí para mencionar"
+# Mensaje a enviar a un jugador cuando su mensaje reciba una reacción
 # PLACEHOLDERS:
-# %name% - (Nick-)Name of the user who reacted (format: 'SomeNickName')
-# %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
-# %msg% - Content of the message which got the reaction
-# %emote% - The reacted emote
-reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% reacted to your message \"§9%msg%§7\" with '%emote%'"
-# Message shown for attachments
-attachment = "Attachment"
-# Message shown for stickers
+# %name% - Apodo / nombre del usuario que ha reaccionado
+# %name2% - Discriminador del usuario que ha reaccionado (Usuario#0001)
+# %msg% - El mensaje que recibió la reacción
+# %emote% - Emote reaccionado
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% ha reaccionado con '%emote%' a \"§9%msg%§7\""
+# Texto a mostrar para archivos
+attachment = "Archivo"
+# Texto a mostrar para stickers
 sticker = "Sticker"
-# Header for Embeds
+# Encabezado de embeds
 embed = "Embed"
-# Message shown for embed images
-embedImage = "Image"
-# Message shown for embed messages
-embedMessage = "Message"
-# Hover message for the bot tag ingame
-bot = "This user is an bot"
+# Texto a mostrar para imágenes
+embedImage = "Imagen"
+# Texto a mostrar para mensajes de embeds
+embedMessage = "Mensaje"
+# Texto a mostrar al colocar el mouse sobre una tag de bot
+bot = "Este usuario es un bot"
 
-# [Minecraft to Discord messages]
+# [Mensajes de minecraft a discord]
 #
-# Gets sent when an player joins
+# Mensaje a mostrar en discord cuando alguien chatea dentro del juego
 # PLACEHOLDERS:
-# %player% - The player's name
-playerJoin = "%player% joined"
-# Gets sent when an player leaves
+# %player% - Nombre del juagdor
+# %msg% - Texto del mensaje
+discordChatMessage = "\<%player%\> %msg%"
+# Mensaje a enviar cuando un jugador entre al juego
 # PLACEHOLDERS:
-# %player% - The player's name
-playerLeave = "%player% left"
-# Gets sent when an player dies
+# %player% - Nombre del jugador
+playerJoin = "%player% se ha unido"
+# Mensaje a enviar cuando un jugador sale del juego
 # PLACEHOLDERS:
-# %player% - The player's name
-# %msg% - The death message
+# %player% - Nombre del jugador
+playerLeave = "%player% se ha ido"
+# Mensaje a enviar cuando un jugador muere
+# PLACEHOLDERS:
+# %player% - Nombre del jugador
+# %msg% - El mensaje de muerte
 playerDeath = "%player% %msg%"
-# Message sent instead of playerLeave, when the player times out
+# Mensaje a enviar cuando un jugador se desconecta por problemas de conexión
 # PLACEHOLDERS:
-# %player% - The player's name
-playerTimeout = "%player% timed out!"
-# Gets sent when an player finishes an advancement
-# Supports MulitLined messages using \n
+# %player% - Nombre del jugador
+playerTimeout = "%player% se ha desconectado por un error"
+# Mensaje a enviar cuando un jugador finishes an advancement
+# Se pueden colocar nuevas líneas usando \n
 # PLACEHOLDERS:
-# %player% - The player's name
-# %advName% - The advancement name
-# %advDesc% - The advancement description
-advancementMessage = "%player% just made the advancement **%advName%**\n_%advDesc%_"
-# The chat message in discord, sent from an player in-game
-# PLACEHOLDERS:
-# %player% - The player's name
-# %msg% - The chat message
-discordChatMessage = "%player%: %msg%"
+# %player% - Nombre del jugador
+# %advName% - Nombre del progreso / logro
+# %advDesc% - Descripción del progreso / logro
+advancementMessage = "%player% ha conseguido el progreso **[%advName%]**\n_%advDesc%_"
 
-# Strings about the discord commands
+# Textos usados en los comandos de discord
 [commands]
-  # Shown in console when trying to use a in-game only command
-  ingameOnly = "This command can only be executed ingame!"
-  # Shown in-game when trying to use a console only command
-  consoleOnly = "This command can only be executed from console!"
-  # Shown when successfully reloading the config file
-  configReloaded = "Config reloaded!"
-  # Shown when an subcommand is disabled
-  subcommandDisabled = "This subcommand is disabled!"
-  # Message sent when user does not have permission to run a command
-  noPermission = "You don't have permission to execute this command!"
-  # Message sent when an invalid command was typed
+  # Se muestra al ejecutar un comando exclusivo del juego en la consola
+  ingameOnly = "Este comando solo puede ejecutarse dentro del juego"
+  # Se muestra al ejecutar un comando exclusivo de la consola dentro del juego
+  consoleOnly = "Este comando solo puede ejecutarse desde la consola"
+  # Se muestra cuando se recarga el archivo de configuración correctamente
+  configReloaded = "Se ha recargado la configuración"
+  # Se muestra cuando un subcomando está deshabilitado
+  subcommandDisabled = "Este subcomando está deshabilitado"
+  # Se muestra cuando el usuario no tiene permisos suficientes para ejecutar un comando
+  noPermission = "No tienes permiso para usar este comando"
+  # Se muestra cuando se intenta ejecutar un comando invalido / mal escrito
+  unknownCommand = "Comando desconocido, usa `/help` para ver una lista de comandos"
+  # Se muestra cuando un jugador no coloca todos los argumentos necesarios
+  notEnoughArguments = "Comando incompleto, faltan argumentos"
+  # Se muestra cuando un jugador coloca mas argumentos de los necesarios
+  tooManyArguments = "Comando invalido, demasiados argumentos"
+  # Se muestra cuando no se encuentra al jugador mencionado en un comando
   # PLACEHOLDERS:
-  unknownCommand = "Unknown command, try `/help` for a list of commands"
-  # Message if a player provides less arguments than required
-  notEnoughArguments = "Not enough arguments"
-  # Message if a player provides too many arguments
-  tooManyArguments = "Too many arguments"
-  # Message if a player can not be found
+  # %player% - Nombre del jugador
+  playerNotFound = "No se encontró al jugador \"%player%\""
+  # Se muestra al usar 'list' cuando no hay jugadores conectados
+  cmdList_empty = "Nadie está conectado"
+  # Se muestra en el encabezado de 'list' cuando hay 1 solo jugador conectado
+  cmdList_one = "Hay 1 jugador conectado:"
+  # El encabezado del comando 'list'
   # PLACEHOLDERS:
-  # %player% - The player's name
-  playerNotFound = "Can not find player \"%player%\""
-  # The message for 'list' when no player is online
-  cmdList_empty = "There is no player online..."
-  # The header for 'list' when one player is online
-  cmdList_one = "There is 1 player online:"
-  # The header for 'list'
+  # %amount% - Cantidad de jugadores conectados
+  cmdList_header = "Hay %amount% jugadores conectados:"
+  # El encabezado del comando 'help'
+  cmdHelp_header = "Comandos disponibles en este canal:"
+  # Se muestra al empezar a ignorar mensajes de discord dentro del juego
+  commandIgnore_ignore = "Ahora estas ignorando mensajes de discord"
+  # Se muestra al dejar a ignorar mensajes de discord dentro del juego
+  commandIgnore_unignore = "Ya no estas ignorando mensajes de discord"
+  # Mensaje a enviar al usar el comando 'uptime'
   # PLACEHOLDERS:
-  # %amount% - The amount of players online
-  cmdList_header = "There are %amount% players online:"
-  # Header of the help command
-  cmdHelp_header = "Your available commands in this channel:"
-  # Message sent when ignoring Discord messages
-  commandIgnore_ignore = "You are now ignoring Discord messages!"
-  # Message sent when unignoring Discord messages
-  commandIgnore_unignore = "You are no longer ignoring Discord messages!"
-  # Message sent when using the uptime command
-  # PLACEHOLDERS:
-  # %uptime% - Uptime in uptime format, see uptimeFormat
-  cmdUptime_message = "The server is running for %uptime%"
-  # The format of the uptime command
-  # For more help with the formatting visit https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
-  uptimeFormat = "dd 'days' HH 'hours' mm 'minutes'"
-  # Shows when running slash commands as command response
-  executing = "Executing..."
-  # Command argument description for the linkcheck command's Discord user parameter
-  cmdLinkcheck_userargDesc = "The discord user to check"
-  # Command argument description for the linkcheck command's minecraft player parameter
-  cmdLinkcheck_mcargDesc = "The minecraft player's UUID or Name to check"
-  # Sent when checked user is not linked
-  cmdLinkcheck_notlinked = "This account is not linked!"
+  # %uptime% - El tiempo que el servidor ha estado activo en formato uptime, véase uptimeFormat
+  cmdUptime_message = "El servidor a estado funcionando por %uptime%"
+  # El formato de uptime
+  # Para mas información acerca del formato visite https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
+  uptimeFormat = "dd 'días' HH 'horas' mm 'minutos'"
+  # Se muestra como respuesta al ejecutar slash commands
+  executing = "Ejecutando..."
+  # Descripción para la opcion 'discorduser' del comando 'linkcheck'
+  cmdLinkcheck_userargDesc = "El usuario de discord a comprobar"
+  # Descripción para la opcion 'mcplayer' del comando 'linkcheck'
+  cmdLinkcheck_mcargDesc = "El nombre o UUID de minecraft a comprobar"
+  # Se muestra cuando no hay cuenta vinculada al comprobar
+  cmdLinkcheck_notlinked = "Esta cuenta no está vinculada"
   # 
-  cmdLinkcheck_discordAcc = "Discord-Account: "
-  cmdLinkcheck_minecraftAcc = "Minecraft Account: "
+  cmdLinkcheck_discordAcc = "Cuenta de Discord: "
+  cmdLinkcheck_minecraftAcc = "Cuenta de Minecraft: "
   cmdLinkcheck_minecraftAccFloodgate = "Minecraft (Bedrock) UUID: "
-  cmdLinkcheck_cannotGetPlayer = "Error getting player information! Maybe you used an invalid name / UUID"
-  cmdSett_key = "Destination settings key"
-  cmdSett_val = "Settings value"
-  cmdSett_set = "Change an setting"
-  cmdSett_get = "Retrieve an setting value"
+  cmdLinkcheck_cannotGetPlayer = "Error al obtener información del jugador. Quizas usaste un nombre / UUID invalido?"
+  cmdSett_key = "Opción a cambiar"
+  cmdSett_val = "Valor a establecer"
+  cmdSett_set = "Cambia una opción"
+  cmdSett_get = "Obtén el valor de una opción"
 
-    # Command descriptions
+    # Descripciones de comandos
     [commands.descriptions]
-      settings = "Allows you to edit your personal settings"
-      uptime = "Displays the server uptime"
-      help = "Displays a list of all commands"
-      list = "Lists all players currently online"
-      link = "Links your Discord account with your Minecraft account"
-      whitelist = "Whitelists you on the server by linking with Discord"
-      linkcheck = "Shows info about an linked discord user or an ingame player"
+      settings = "Te permite editar tus opciones personales"
+      uptime = "Muestra el tiempo que el servidor estuvo activo"
+      help = "Muestra una lista de todos los comandos"
+      list = "Muestra a todos los jugadores conectados"
+      link = "Vincula tu cuenta de discord con tu cuenta de minecraft"
+      whitelist = "Te agrega a la lista blanca del servidor al vincular tu cuenta de discord"
+      linkcheck = "Muestra información acerca de una cuenta vinculada de discord / minecraft"
 
 # Strings about the account linking feature
 [linking]
